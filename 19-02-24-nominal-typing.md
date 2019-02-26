@@ -21,9 +21,9 @@ const yen: Yen = day; // は？
 
 インターフェイスで適当なプロパティをでっち上げて、エイリアスを定義したいプリミティブ型と構造を変える
 
-> `_` プレフィックスと `Brand` サフィックスを使用する規約を強くお薦めします(そして、[TypeScriptチームに採用されている規約です](https://github.com/Microsoft/TypeScript/blob/7b48a182c05ea4dea81bab73ecbbe9e013a79e99/src/compiler/types.ts#L693-L698))。
+> `_` プレフィックスと `Brand` サフィックスを使用する規約を強くお薦めします(そして、[TypeScriptチームに採用されている規約です][1])。
 >
-> [Nominal Typing - TypeScript Deep Dive 日本語版](https://typescript-jp.gitbook.io/deep-dive/main-1/nominaltyping#intafsuno)
+> [Nominal Typing - TypeScript Deep Dive 日本語版][2]
 
 ```ts
 interface AdventDay extends Number {
@@ -41,5 +41,9 @@ const day: AdventDay = 123 as any;
 const yen: Yen = day;
 // => Property '_yenBrand' is missing in type 'AdventDay' but required in type 'Yen'.
 ```
+
+[1]: https://github.com/Microsoft/TypeScript/blob/7b48a182c05ea4dea81bab73ecbbe9e013a79e99/src/compiler/types.ts#L693-L698
+[2]: https://typescript-jp.gitbook.io/deep-dive/main-1/nominaltyping#intafsuno
+
 
 
